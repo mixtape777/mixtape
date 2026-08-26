@@ -1,1 +1,152 @@
-# mixtape
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TEGAR AJO MIXTAPE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-image:url('https://i.pinimg.com/736x/82/16/26/8216268ad3dd227ace5fb47a0e9bd6bd.jpg');
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .bio-container {
+            background: #141416;
+            width: 100%;
+            max-width: 400px;
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            border: 1px solid #222225;
+        }
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid #ff5500;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(255, 85, 0, 0.3);
+        }
+        .dj-name {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        .dj-genre {
+            font-size: 13px;
+            color: #ff5500;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        .dj-desc {
+            font-size: 14px;
+            color: #fdfdfd;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .soundcloud-neon-btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #141416; 
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            padding: 16px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid #ff5500;
+            box-shadow: 0 0 10px rgba(255, 85, 0, 0.4), inset 0 0 10px rgba(255, 85, 0, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .soundcloud-neon-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+   
+            background: linear-gradient(
+                90deg, 
+                rgba(255, 85, 0, 0) 0%, 
+                rgba(243, 243, 243, 0.8) 50%, 
+                rgba(255, 85, 0, 0) 100%
+            );
+            
+            animation: neonGlitch 4s linear infinite alternate;
+        }
+
+        @keyframes neonGlitch {
+            0% {
+                left: -100%;
+            }
+            50% {
+                left: 150%; 
+            }
+            50.001% {
+                left: 150%;
+            }
+            100% {
+                left: -100%; 
+            }
+        }
+
+        .soundcloud-neon-btn:hover {
+            background-color: #ff1500;
+            box-shadow: 0 0 25px rgb(247, 247, 247), 0 0 50px rgb(255, 0, 0);
+            transform: scale(1.03);
+        }
+
+        .footer {
+            margin-top: 35px;
+            font-size: 11px;
+            color: #f8f8f8;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bio-container">
+        <img src="https://i.pinimg.com/736x/e0/36/ea/e036ea71ed04bd3bc9efa58c07aef5bd.jpg" alt="Foto DJ" class="profile-img">
+        
+        <div class="dj-name">[TEGAR AJO BINJE MIXTAPE]</div>
+        <div class="dj-genre">[MUSIK KERAS ENAK DI DENGAR • BINJAI]</div>
+        
+        <p class="dj-desc">
+            Membawa energi lantai dansa langsung ke telinga Anda. Menghadirkan perpaduan ketukan bass yang berat dan ritme yang segar.
+        </p>
+        
+        <a href="https://soundcloud.com/tegar-ps-802230789/mixtape-semakin-menggila?si=ecbcf2f05d7049b1acc7d79606e10497&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" class="soundcloud-neon-btn" target="_blank">
+            🎧 DENGARKAN DI SOUNDCLOUD
+        </a>
+        
+        <div class="footer">
+            © 2026 [TEGAR AJO BINJE MIXTAPE]. All Rights Reserved.
+        </div>
+    </div>
+
+</body>
+</html>
