@@ -3,150 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>TEGAR AJO MIXTAPE</title>
+    <title>CHEAT AUTO MAXXWIN</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --neon-yellow: #ff1500;
+            --neon-white: #ffffff;
+            --dark-bg: #000000;
+            --box-yellow: #ffb702fb;
         }
+
         body {
-            background-image:url('https://i.pinimg.com/736x/82/16/26/8216268ad3dd227ace5fb47a0e9bd6bd.jpg');
-            color: #ffffff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: #ffffff;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            margin: 0;
             padding: 20px;
+            box-sizing: border-box;
         }
-        .bio-container {
-            background: #141416;
-            width: 100%;
-            max-width: 400px;
-            padding: 35px 25px;
-            border-radius: 20px;
+
+        .logo-container {
+            margin-bottom: 20px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-            border: 1px solid #222225;
+            z-index: 2;
         }
-        .profile-img {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            border: 3px solid #ff5500;
-            object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 0 15px rgba(255, 85, 0, 0.3);
+
+        .logo-container img {
+            max-width: 200px;
+            height: auto;
+            display: block;
         }
-        .dj-name {
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 5px;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-        }
-        .dj-genre {
-            font-size: 13px;
-            color: #ff5500;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-        }
-        .dj-desc {
-            font-size: 14px;
-            color: #fdfdfd;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        
-        .soundcloud-neon-btn {
+
+        .neon-container {
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #141416; 
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            padding: 16px;
-            border-radius: 8px;
+            background-color: var(--box-yellow);
+            padding: 40px;
+            border-radius: 20px;
+            width: 400px;
+            box-sizing: border-box;
             overflow: hidden;
-            border: 2px solid #ff5500;
-            box-shadow: 0 0 10px rgba(255, 85, 0, 0.4), inset 0 0 10px rgba(255, 85, 0, 0.2);
-            transition: all 0.4s ease;
+            box-shadow: 0 1px 25px rgb(0, 255, 251);
         }
 
-        .soundcloud-neon-btn::before {
-            content: '';
+        .neon-line {
             position: absolute;
+            box-sizing: border-box;
+        }
+
+        .line-top {
             top: 0;
-            left: -150%;
-            width: 50%;
+            left: -100%;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, transparent, var(--neon-yellow));
+            animation: moveRight 2s linear infinite;
+        }
+
+        .line-right {
+            top: -100%;
+            right: 0;
+            width: 5px;
             height: 100%;
-   
-            background: linear-gradient(
-                90deg, 
-                rgba(255, 85, 0, 0) 0%, 
-                rgba(243, 243, 243, 0.8) 50%, 
-                rgba(255, 85, 0, 0) 100%
-            );
-            
-            animation: neonGlitch 4s linear infinite alternate;
+            background: linear-gradient(180deg, transparent, var(--neon-white));
+            animation: moveDown 2s linear infinite;
+            animation-delay: 0.5s;
         }
 
-        @keyframes neonGlitch {
-            0% {
-                left: -100%;
-            }
-            50% {
-                left: 150%; 
-            }
-            50.001% {
-                left: 150%;
-            }
-            100% {
-                left: -100%; 
-            }
+        .line-bottom {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(270deg, transparent, var(--neon-yellow));
+            animation: moveLeft 2s linear infinite;
+            animation-delay: 1s;
         }
 
-        .soundcloud-neon-btn:hover {
-            background-color: #ff1500;
-            box-shadow: 0 0 25px rgb(247, 247, 247), 0 0 50px rgb(255, 0, 0);
-            transform: scale(1.03);
+        .line-left {
+            bottom: -100%;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, var(--neon-white));
+            animation: moveUp 2s linear infinite;
+            animation-delay: 1.5s;
         }
 
-        .footer {
-            margin-top: 35px;
-            font-size: 11px;
-            color: #f8f8f8;
+        @keyframes moveRight { 0% { left: -100%; } 50%, 100% { left: 100%; } }
+        @keyframes moveDown { 0% { top: -100%; } 50%, 100% { top: 100%; } }
+        @keyframes moveLeft { 0% { right: -100%; } 50%, 100% { right: 100%; } }
+        @keyframes moveUp { 0% { bottom: -100%; } 50%, 100% { bottom: 100%; } }
+
+        .inner-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.4;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             letter-spacing: 1px;
         }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #fafafa;
+            border-radius: 6px;
+            background-color: #262626;
+            color: #fff;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        input:focus, select:focus {
+            border-color: var(--neon-yellow);
+            box-shadow: 0 0 8px rgb(255, 255, 255);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(90deg, #ffe600 0%, #00fbff 100%);
+            border: 1px solid #000000;
+            border-radius: 6px;
+            color: #000000;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(5, 5, 5, 0.987);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-submit:hover {
+            transform: scale(1.01);
+            filter: brightness(1.1);
+        }
+
+        .footer-text {
+            background: linear-gradient(90deg, transparent, #ffb702fb, #ffb702fb, #ffb702fb, transparent);
+            margin-top: 135px;
+            color: rgb(255, 253, 253);
+            font-size: 15px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgb(0, 0, 0);
+            padding: 5px 20px;
+            display: inline-block;
+            margin-top: 25px;
+            font-weight: bold;
+            border: 0,5px solid #fff;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(5, 5, 5, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .success-box {
+            background-color: #000000;
+            border: 2px solid var(--neon-yellow);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 0 30px var(--neon-yellow);
+        }
+
+        .checkmark-svg {
+            width: 80px;
+            height: 80px;
+            fill: none;
+            stroke: #1aff01;
+            stroke-width: 4;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            animation: drawCheck 0.6s ease-in-out forwards;
+            margin-bottom: 20px;
+        }
+
+        @keyframes drawCheck { to { stroke-dashoffset: 0; } }
     </style>
 </head>
 <body>
 
-    <div class="bio-container">
-        <img src="https://i.pinimg.com/736x/e0/36/ea/e036ea71ed04bd3bc9efa58c07aef5bd.jpg" alt="Foto DJ" class="profile-img">
+<div class="logo-container">
+    <img src="https://veldrive.com/tCXSD8JT/tribuntogel/logo-tribuntogel.gif" alt="LOGO LINK URL" onerror="this.style.display='none';">
+</div>
+
+<div class="neon-container">
+    <div class="neon-line line-top"></div>
+    <div class="neon-line line-right"></div>
+    <div class="neon-line line-bottom"></div>
+    <div class="neon-line line-left"></div>
+
+    <div class="inner-content">
+        <h2>CHEAT AUTO MAXXWIN LOGIN SEKARANG JUGA</h2>
         
-        <div class="dj-name">[TEGAR AJO BINJE MIXTAPE]</div>
-        <div class="dj-genre">[MUSIK KERAS ENAK DI DENGAR • BINJAI]</div>
-        
-        <p class="dj-desc">
-            Membawa energi lantai dansa langsung ke telinga Anda. Menghadirkan perpaduan ketukan bass yang berat dan ritme yang segar.
-        </p>
-        
-        <a href="https://soundcloud.com/tegar-ps-802230789/mixtape-semakin-menggila?si=ecbcf2f05d7049b1acc7d79606e10497&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" class="soundcloud-neon-btn" target="_blank">
-            🎧 DENGARKAN DI SOUNDCLOUD
-        </a>
-        
-        <div class="footer">
-            © 2026 [TEGAR AJO BINJE MIXTAPE]. All Rights Reserved.
+        <div class="form-group">
+            <label for="username">USERNAME :</label>
+            <input type="text" id="username" placeholder="Masukkan nama pengguna...">
         </div>
+
+        <div class="form-group">
+            <label for="deposit">MINIMAL DEPOSIT :</label>
+            <input type="text" id="deposit" placeholder="0" oninput="formatTitik(this)">
+        </div>
+
+        <div class="form-group">
+            <label for="vpn">SERVER :</label>
+            <select id="vpn">
+                <option value="singapore">SINGAPORE</option>
+                <option value="thailand">THAILAND</option>
+                <option value="kamboja">KAMBOJA</option>
+                <option value="china">CHINA</option>
+                <option value="japan">JAPAN</option>
+                <option value="indonesia">INDONESIA</option>
+                <option value="rusia">RUSIA</option>
+                <option value="philippines">PHILIPPINES</option>
+                <option value="america">AMERICA</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="game">GAME PERMAINAN :</label>
+            <select id="game">
+                <option value="pragmatic">PRAGMATIC PLAY</option>
+                <option value="pgsoft">PG SOFT</option>
+                <option value="habanero">HABANERO</option>
+                <option value="idnslot">IDN SLOT</option>
+                <option value="gmw">GMW</option>
+                <option value="microgaming">MICRO GAMING</option>
+                <option value="nolimitcity">NOLIMIT CITY</option>
+                <option value="slotmania">SLOT MANIA</option>
+            </select>
+        </div>
+
+        <button class="btn-submit" onclick="triggerSuccess()">AKTIFKAN</button>
     </div>
+</div>
+
+<div class="footer-text">© 2026 Copyright. TRIBUNTOGEL | SEO GET</div>
+
+<div class="overlay" id="successOverlay">
+    <div class="success-box">
+        <svg class="checkmark-svg" viewBox="0 0 52 52">
+            <circle cx="26" cy="26" r="25" fill="none" stroke="#fff" stroke-width="2"/>
+            <path d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+        <h2 style="color: #0dff01; margin-bottom: 30px;">SUCCESS</h2>
+        <p style="color: #0dff01; margin: 0;">Menghubungkan ke jaringan...</p>
+    </div>
+</div>
+
+<script>
+    function formatTitik(elemen) {
+        let value = elemen.value.replace(/\D/g, "");
+        
+        if (value !== "") {
+            elemen.value = new Intl.NumberFormat('id-ID').format(value);
+        } else {
+            elemen.value = "";
+        }
+    }
+
+    function triggerSuccess() {
+        const user = document.getElementById('username').value;
+        const deposit = document.getElementById('deposit').value;
+
+        if (!user || !deposit) {
+            alert("Harap isi USERNAME dan MINIMAL DEPOSIT.");
+            return;
+        }
+
+        document.getElementById('successOverlay').style.display = 'flex';
+
+        setTimeout(function() {
+            window.location.href = "https://tribuntogel.com";
+        }, 2500);
+    }
+</script>
 
 </body>
 </html>
