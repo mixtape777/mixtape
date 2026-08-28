@@ -9,14 +9,7 @@
         :root {
             --neon-yellow: #ff1500;
             --neon-white: #ffffff;
-              max-width: 500px;
-              margin: 0 auto;
-              background-color: #000000;
-              background-image: url(https://veldrive.com/2iWyDcHg/Tribuntogel/background-tribuntogel.jpg);
-              background-size: cover;
-              background-repeat: no-repeat;
-              background-position: center;
-              background-attachment: fixed;
+            --dark-bg: #000000;
             --box-yellow: #ffb702fb;
         }
 
@@ -32,15 +25,6 @@
             margin: 0;
             padding: 20px;
             box-sizing: border-box;
-        html {
-            max-width: 500px;
-            margin: 0 auto;
-            background-color: #000000;
-            background-image: url(https://veldrive.com/2iWyDcHg/Tribuntogel/background-tribuntogel.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
         }
 
         .logo-container {
@@ -63,7 +47,7 @@
             width: 400px;
             box-sizing: border-box;
             overflow: hidden;
-            box-shadow: 0 1px 25px rgb(0, 0, 0);
+            box-shadow: 0 1px 25px rgb(0, 255, 251);
         }
 
         .neon-line {
@@ -75,7 +59,7 @@
             top: 0;
             left: -100%;
             width: 100%;
-            height: 4px;
+            height: 5px;
             background: linear-gradient(90deg, transparent, var(--neon-yellow));
             animation: moveRight 2s linear infinite;
         }
@@ -85,7 +69,7 @@
             right: 0;
             width: 5px;
             height: 100%;
-            background: linear-gradient(500deg, transparent, var(--neon-white));
+            background: linear-gradient(180deg, transparent, var(--neon-white));
             animation: moveDown 2s linear infinite;
             animation-delay: 0.5s;
         }
